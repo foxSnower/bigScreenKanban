@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>大屏看板</title>
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body class="ht-body">
+  <canvas id="html5_3d_animation"></canvas>
+  <div class="g-header">
+    <div class="logo"></div>
+    <div class="g-up">
+      <span class="hd">累计撮合金额：</span>
+      <span class="bd animateNums" data-num="0" data-height="100" id="cumulativeFixedAmount">0</span>
+      <span class="ft">元</span>
+    </div>
+    <div class="g-down">
+      <div class="left">
+        <div class="bd">
+          <span class="num animateNums" data-num="100017219511" data-height="42" id="cmulativeFixSingular">0
+          </span>
+          <span class="sub-title">累计撮合单数</span>
+        </div>
+      </div>
+      <div class="center">
+        <div class="bd">
+          <span class="num animateNums" data-num="100017219511" data-height="42" id="cumulativeService">0</span>
+          <span class="sub-title">累计服务企业与个人</span>
+        </div>
+      </div>
+      <div class="right">
+        <div class="bd">
+          <span class="num animateNums" data-num="100017219511" data-height="42" id="businessBalance">0</span>
+          <span class="sub-title">撮合业务余额</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="g-body">
+    <div class="g-left">
+      <div class="m-echarts top u-echarts-bg">
+        <div class="title">各月撮合金额趋势</div>
+        <div id="amountTrend" style="width:100%; height:196px;"></div>
+      </div>
+      <div class="m-echarts u-echart-animate center">
+        <div class="title">当月分公司撮合金额排名top10</div>
+        <ul>
+          <li class="u-echarts-bg li-01">
+            <div class="sub-title1">房贷</div>
+            <div class="sub-title2">单位：万</div>
+            <div class="wrap">
+              <div class="roll-wrap" id="roll-wrap">
+                <ul id="houseRanking">
+                  <!-- <li class="ranking">
+                    <span class="num">1</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 40%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">2</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 45%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">3</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 70%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">4</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 40%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">5</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 20%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">6</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 5%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">7</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 5%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li class="u-echarts-bg li-02">
+            <div class="sub-title1">车贷</div>
+            <div class="sub-title2">单位：万</div>
+            <div class="wrap">
+              <div class="roll-wrap" id="roll-wrap2">
+                <ul id="carRanking">
+                  <!-- <li class="ranking">
+                    <span class="num">1</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 40%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">2</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 45%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">3</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 70%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">4</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 40%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">5</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 20%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li>
+                  <li class="ranking">
+                    <span class="num">6</span>
+                    <span class="name">呼噜浩特分公司</span>
+                    <span class="progress-bar orange stripes">
+                      <span style="width: 5%"></span>
+                    </span>
+                    <span class="money">6000</span>
+                  </li> -->
+                </ul>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="m-echarts bottom u-echarts-bg">
+        <div class="title">借款期限占比分布</div>
+        <div class="circle-box">
+          <div class="circle01"></div>
+          <div class="circle02"></div>
+        </div>
+        <div id="term" style="width:100%; height:196px;"></div>
+      </div>
+    </div>
+    <!-- 中心地图金额的分布 -->
+    <div class="g-center">
+      <div class="g-center-box">
+        <div class="g-ft">
+          <marquee>践行普惠金融服务理念，助力中国小微企业发展。鸿特金服，让金融惠及天下，让梦想不再遥远！
+          </marquee>
+        </div>
+        <div class="map-box">
+          <div class="map" id="map"></div>
+        </div>
+      </div>
+    </div>
+    <div class="g-right">
+      <div class="m-echarts top u-echarts-bg">
+        <div class="title">客户撮合情况</div>
+        <div id="singular" style="width:100%; height:196px;"></div>
+      </div>
+      <div class="m-echarts center">
+        <div class="title">客户行业分布</div>
+        <div class="u-echarts-bg distribution">
+          <div class="circle-box">
+            <div class="circle01"></div>
+            <div class="circle02"></div>
+            <div class="circle03"></div>
+          </div>
+          <ul id="industry">
+            <!-- <li>
+              <p class="li-left">1%</p>
+              <p class="li-right">
+                <span>信息傳输业</span>
+              </p>
+            </li>
+            <li>
+              <p class="li-left">2%</p>
+              <p class="li-right">
+                <span>信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业信息傳输业</span>
+              </p>
+            </li>
+            <li>
+              <p class="li-left">3%</p>
+              <p class="li-right">
+                <span>信息傳输息傳输、、软件和信息技服务业</span>
+              </p>
+            </li>
+            <li>
+              <p class="li-left">4%</p>
+              <p class="li-right">
+                <span>信息傳输、软件和信息技服务业</span>
+              </p>
+            </li>
+            <li>
+              <p class="li-left">5%</p>
+              <p class="li-right">
+                <span>信息傳输、软件和信息技服务业</span>
+              </p>
+            </li>
+            <li>
+              <p class="li-left">6%</p>
+              <p class="li-right">
+                <span>信息傳输、软件和信息技服务业</span>
+              </p>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+      <div class="m-echarts bottom u-echarts-bg">
+        <div class="title">客户地区分布</div>
+        <div class="circle-box">
+          <div class="circle01"></div>
+          <div class="circle02"></div>
+        </div>
+        <div id="region" style="width:100%; height:196px"></div>
+      </div>
+    </div>
+  </div>
+  <script src="./js/echarts.min.js"></script>
+  <script src="./js/china.js"></script>
+  <script src="./js/jquery-1.9.1.min.js"></script>
+  <script src="./js/html5_3d_animation.js"></script>
+
+  <script src="./js/unit.js"></script>
+
+  <!-- <script src="./js/data.js"></script> -->
+  <script src="./js/setEcharts.js"></script>
+  <script src="./js/getData.js"></script>
+  <script>
+    $(function () {
+
+
+      // //主要数据
+      // $('#cumulativeFixedAmount').attr('data-num', Json.cumulativeFixedAmount);
+      // $('#cumulativeFixedAmount').animateNums();
+      // $('#cmulativeFixSingular').attr('data-num', Json.cmulativeFixSingular);
+      // $('#cmulativeFixSingular').animateNums();
+      // $('#cumulativeService').attr('data-num', Json.cumulativeService);
+      // $('#cumulativeService').animateNums();
+      // $('#businessBalance').attr('data-num', Json.businessBalance);
+      // $('#businessBalance').animateNums();
+
+      // // 客户行业分布
+      // var industry = function (industryJson) {
+      //   var listHtml = '';
+      //   industryJson.forEach(function (x, index) {
+      //     listHtml += '<li>' +
+      //       '<p class="li-left">' + x.percent + '</p>' +
+      //       '<p class="li-right">' +
+      //       '<span>' + x.describe + '</span>' +
+      //       '</p>' +
+      //       '</li>';
+      //   });
+      //   $('#industry').html(listHtml);
+      // }
+
+      // industry(industryJson);
+      // // 行业分布动画
+      // randomPlay();
+
+      // //各月撮合金额趋势
+      // s.amountTrend(Json.amountTrend);
+      // //客户撮合情况
+      // s.singular(Json.singular);
+      // //借款期限占比分布
+      // s.term(Json.term);
+      // //客户地区分布
+      // s.region(Json.region);
+      // //中心地图金额的分布
+      // s.map(mapJson, tipsJson);
+
+      // //客户地区分布
+      // function ranking(_json) {
+      //   var listHtml = '';
+      //   _json.forEach(function (x, index) {
+      //     listHtml += '<li class="ranking">' +
+      //       '<span class="num">' + x.top + '</span>' +
+      //       '<span class="name">' + x.companyName + '</span>' +
+      //       '<span class="progress-bar orange stripes">' +
+      //       '<span style="width: ' + x.percent + '"></span>' +
+      //       '</span>' +
+      //       '<span class="money">' + x.money + '</span>' +
+      //       '</li>';
+      //   });
+      //   return listHtml
+      // }
+      // $('#houseRanking').html(ranking(Json.houseRanking));
+      // $('#carRanking').html(ranking(Json.carRanking));
+
+      // scrollTxt('#roll-wrap', wrap1);
+      // scrollTxt('#roll-wrap2', wrap2);
+
+
+
+      // function curTime() {
+      //   var today = new Date()
+      //   var h = today.getHours()
+      //   var m = today.getMinutes()
+      //   var s = today.getSeconds()
+      //   if (h < 10) m = "0" + h;
+      //   if (m < 10) m = "0" + m;
+      //   if (s < 10) s = "0" + s;
+      //   // add a zero in front of numbers<10
+      //   return h + ":" + m + ":" + s;
+      // }
+      // var curTime = curTime();
+      // console.log(curTime);
+    })
+  </script>
+</body>
+
+</html>

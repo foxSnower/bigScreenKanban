@@ -1,0 +1,107 @@
+@charset "UTF-8";
+* { padding: 0; margin: 0; }
+
+ul { list-style: none; }
+
+.ht-body { background: #050511; min-width: 1080px; height: 100vh; font-size: 14px; font-family: 'Microsoft YaHei'; background: url(../img/bg.jpg) no-repeat; background-position: center; background-size: 100% 100%; overflow: hidden; }
+
+.g-header { position: relative; width: 100%; /* 鏁板瓧婊氬姩鏁堟灉鏍峰紡 */ }
+.g-header .logo { width: 147px; height: 38px; position: absolute; top: 50px; right: 60px; background: url(../img/logo.png) no-repeat; background-position: center; background-size: 100% 100%; }
+.g-header .g-up { text-align: center; font-size: 34px; color: #fff; height: 140px; }
+.g-header .g-up::before { content: ''; display: inline-block; vertical-align: middle; width: 1px; height: 100%; background: transparent; }
+.g-header .g-up .hd, .g-header .g-up .ft { margin-top: 40px; }
+.g-header .g-up span { display: inline-block; vertical-align: middle; }
+.g-header .g-up .bd { color: #f8d348; font-size: 92px; padding: 0 10px; overflow: hidden; }
+.g-header .g-down { display: block; max-width: 1850px; min-width: 1318px; height: 148px; overflow: hidden; margin: 0 auto; }
+.g-header .g-down .left, .g-header .g-down .center, .g-header .g-down .right { display: block; width: 33.3%; float: left; text-align: center; height: 100%; }
+.g-header .g-down .left .bd, .g-header .g-down .center .bd, .g-header .g-down .right .bd { position: relative; width: 436px; height: 149px; background: url(../img/bg_data.png) no-repeat; background-position: center; background-size: 100% 100%; color: #f8d348; margin: 0 auto; }
+.g-header .g-down .left .bd .num, .g-header .g-down .center .bd .num, .g-header .g-down .right .bd .num { display: block; position: absolute; left: 0; top: 35px; width: 100%; font-size: 42px; font-style: normal; }
+.g-header .g-down .left .bd .sub-title, .g-header .g-down .center .bd .sub-title, .g-header .g-down .right .bd .sub-title { position: absolute; font-size: 24px; color: #70c1ff; left: 0; bottom: 5px; width: 100%; display: inline-block; }
+.g-header .animateNums { line-height: 100px; display: block; }
+.g-header .animateNums .amount-span { display: inline-block; vertical-align: middle; }
+.g-header .animateNums .amount-span i { display: block; font-style: normal; width: 55px; height: 100px; float: left; position: relative; overflow: hidden; }
+.g-header .animateNums .amount-span i div { text-indent: 0; text-align: center; position: absolute; }
+.g-header .num.animateNums { height: 42px; line-height: 42px; }
+.g-header .num.animateNums .amount-span { display: inline-block; vertical-align: middle; }
+.g-header .num.animateNums .amount-span i { display: block; font-style: normal; width: 24px; height: 42px; float: left; position: relative; overflow: hidden; }
+.g-header .num.animateNums .amount-span i div { text-indent: 0; text-align: center; position: absolute; }
+
+.g-body { margin: 0 0 10px; width: 100%; height: 784px; overflow: hidden; /* 鎺掑悕琛ㄦ牸鍚戜笂閫愭潯婊氬姩鏍峰紡 */ }
+.g-body .g-left, .g-body .g-right { position: relative; float: left; width: 500px; height: 100%; margin: 0 -500px 0 0; }
+.g-body .g-left .m-echarts, .g-body .g-right .m-echarts { float: right; }
+.g-body .g-right { float: right; height: 100%; margin: 0 0 0 -500px; }
+.g-body .g-right .m-echarts { float: left; }
+.g-body .g-center { float: left; width: 100%; height: 100%; }
+.g-body .g-center .g-center-box { position: relative; height: 100%; margin: 0 510px 0 510px; }
+.g-body .g-center .g-center-box .map-box { position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: -1; }
+.g-body .g-center .g-center-box .map { width: 130%; height: 100%; margin-left: -15%; }
+.g-body .g-center .g-center-box .g-ft { position: absolute; width: 100%; bottom: 20px; color: #fff; font-size: 16px; text-align: center; z-index: 2; }
+.g-body .m-echarts { width: 450px; height: 196px; position: relative; margin-top: 44px; }
+.g-body .m-echarts .title { position: absolute; top: -30px; left: 0; color: #fff; padding-left: 15px; font-size: 16px; }
+.g-body .m-echarts .title::before { content: ''; position: absolute; top: 20%; left: 0; width: 3px; height: 70%; background: #f8d348; }
+.g-body .m-echarts.center { height: 244px; }
+.g-body .m-echarts.center .distribution { height: 244px; }
+.g-body .u-echarts-bg { width: 450px; height: 196px; background: url(../img/bg_echarts.png) no-repeat; background-position: center; background-size: 100% 100%; }
+.g-body .li-01, .g-body .li-02 { position: absolute; -webkit-transition: all 1s; -moz-transition: all 1s; -ms-transition: all 1s; -o-transition: all 1s; transition: all 1s; }
+.g-body .li-01 { opacity: 1; z-index: 3; -webkit-transform: translate3d(0, 40px, 0); -moz-transform: translate3d(0, 40px, 0); -ms-transform: translate3d(0, 40px, 0); -o-transform: translate3d(0, 40px, 0); transform: translate3d(0, 40px, 0); -webkit-transform-origin: center top; -moz-transform-origin: center top; -ms-transform-origin: center top; -o-transform-origin: center top; transform-origin: center top; }
+.g-body .li-02 { z-index: 2; opacity: 0.2; -webkit-transform: translate3d(0, 0, 0) scale(0.9); -moz-transform: translate3d(0, 0, 0) scale(0.9); -ms-transform: translate3d(0, 0, 0) scale(0.9); -o-transform: translate3d(0, 0, 0) scale(0.9); transform: translate3d(0, 0, 0) scale(0.9); }
+.g-body .sub-title1 { position: absolute; top: 0; left: 20px; width: 90px; height: 26px; line-height: 26px; color: #55a1f3; text-align: left; }
+.g-body .sub-title2 { position: absolute; top: 0; right: 20px; width: 90px; height: 26px; line-height: 26px; color: #55a1f3; text-align: right; }
+.g-body .wrap { width: 100%; margin-top: 30px; }
+.g-body .wrap li { display: block; height: 33px; line-height: 33px; }
+.g-body .roll-wrap { height: 160px; overflow: hidden; }
+.g-body .ranking { color: #f8d348; }
+.g-body .ranking span { display: inline-block; }
+.g-body .ranking .num { width: 50px; text-align: center; }
+.g-body .ranking .name { color: #fff; width: 120px; }
+.g-body .ranking .money { width: 80px; text-align: right; }
+.g-body .ranking .progress-bar { position: relative; background: #314982; line-height: 42px; width: 180px; height: 10px; }
+.g-body .ranking .progress-bar span { position: absolute; display: inline-block; height: 10px; width: 180px; -webkit-transition: width 0.4s ease-in-out; -moz-transition: width 0.4s ease-in-out; -ms-transition: width 0.4s ease-in-out; -o-transition: width 0.4s ease-in-out; transition: width 0.4s ease-in-out; }
+.g-body .ranking .orange span { background-color: #f7ce4c; }
+.g-body .distribution { height: 143px; position: relative; overflow: hidden; }
+.g-body .distribution .circle-box { position: absolute; top: 34px; left: 0; right: 0; bottom: 5px; overflow: hidden; }
+.g-body .distribution .circle-box .circle01, .g-body .distribution .circle-box .circle02, .g-body .distribution .circle-box .circle03 { position: absolute; left: 50%; }
+.g-body .distribution .circle-box .circle01 { background: url(../img/cheat-circle01.png) no-repeat; width: 118px; height: 118px; margin-left: -59px; top: 36px; -webkit-animation-name: rotateClockWise; animation-name: rotateClockWise; -webkit-animation-duration: 10s; animation-duration: 10s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-delay: 0; animation-delay: 0; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+.g-body .distribution .circle-box .circle02 { background: url(../img/cheat-circle02.png) no-repeat; width: 203px; height: 203px; margin-left: -101.5px; top: -7px; -webkit-animation-name: rotateAntiClockWise; animation-name: rotateAntiClockWise; -webkit-animation-duration: 15s; animation-duration: 15s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-delay: 0; animation-delay: 0; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+.g-body .distribution .circle-box .circle03 { background: url(../img/cheat-circle03.png) no-repeat; width: 294px; height: 294px; margin-left: -149px; top: -53px; -webkit-animation-name: rotateClockWise; animation-name: rotateClockWise; -webkit-animation-duration: 45s; animation-duration: 45s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-delay: 0; animation-delay: 0; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+.g-body .distribution li.two:nth-of-type(1) { top: 72px; left: 30px; z-index: 1; opacity: 1; }
+.g-body .distribution li.two:nth-of-type(2) { top: 152px; left: 190px; z-index: 1; opacity: 1; }
+.g-body .distribution li.three:nth-of-type(1) { top: 42px; left: 30px; z-index: 1; opacity: 1; }
+.g-body .distribution li.three:nth-of-type(2) { top: 162px; left: 70px; z-index: 1; opacity: 1; }
+.g-body .distribution li.three:nth-of-type(3) { top: 102px; left: 190px; z-index: 1; opacity: 1; }
+.g-body .distribution li.fourth:nth-of-type(1) { top: 42px; left: 20px; z-index: 1; opacity: 1; }
+.g-body .distribution li.fourth:nth-of-type(2) { top: 130px; left: 20px; z-index: 2; opacity: 1; }
+.g-body .distribution li.fourth:nth-of-type(3) { top: 80px; left: 190px; z-index: 3; opacity: 1; }
+.g-body .distribution li.fourth:nth-of-type(4) { top: 170px; left: 190px; opacity: 1; }
+.g-body .distribution li { position: absolute; top: 100px; left: 100px; background: url(../img/bg_tips01.png) no-repeat; background-size: 100% 100%; width: 230px; height: 46px; color: #fff; overflow: hidden; line-height: 1.2; padding: 5px; opacity: 0; transition: all 0.5s; -moz-transition: all 0.5s; -webkit-transition: all 0.5s; -o-transition: all 0.5s; }
+.g-body .distribution li .li-left { position: relative; width: 35%; line-height: 50px; float: left; font-size: 27px; color: #f8d348; font-family: 'Times New Roman'; text-align: center; }
+.g-body .distribution li .li-left:after { content: ''; width: 2px; height: 70%; position: absolute; top: 15%; right: 0px; background: #324c8a; }
+.g-body .distribution li .li-right { display: inline-block; font-size: 16px; vertical-align: middle; width: 65%; float: left; }
+.g-body .distribution li .li-right span { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -ms-transform: translateY(-50%); -o-transform: translateY(-50%); transform: translateY(-50%); padding: 0 10px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 2; }
+.g-body .bottom { position: relative; }
+.g-body .bottom .circle-box { position: absolute; top: 34px; left: 0; right: 0; bottom: 5px; overflow: hidden; }
+.g-body .bottom .circle-box .circle01, .g-body .bottom .circle-box .circle02 { position: absolute; left: 50%; }
+.g-body .bottom .circle-box .circle01 { background: url(../img/circle01.png) no-repeat; width: 26px; height: 26px; margin-left: -126px; top: 61px; -webkit-animation-name: rotateClockWise; animation-name: rotateClockWise; -webkit-animation-duration: 10s; animation-duration: 10s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-delay: 0; animation-delay: 0; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+.g-body .bottom .circle-box .circle02 { background: url(../img/circle02.png) no-repeat; background-size: 140px 140px; width: 140px; height: 140px; margin-left: -183px; top: 3px; -webkit-animation-name: rotateAntiClockWise; animation-name: rotateAntiClockWise; -webkit-animation-duration: 15s; animation-duration: 15s; -webkit-animation-timing-function: linear; animation-timing-function: linear; -webkit-animation-delay: 0; animation-delay: 0; -webkit-animation-iteration-count: infinite; animation-iteration-count: infinite; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+
+.eddy { -webkit-animation-name: eddy; animation-name: eddy; -webkit-animation-duration: 5s; animation-duration: 5s; -webkit-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+
+.eddy-pre { -webkit-animation-name: eddyPre; animation-name: eddyPre; -webkit-animation-duration: 10s; animation-duration: 10s; -webkit-animation-timing-function: ease; animation-timing-function: ease; -webkit-animation-delay: 0s; animation-delay: 0s; -webkit-animation-iteration-count: 1; animation-iteration-count: 1; -webkit-animation-fill-mode: both; animation-fill-mode: both; -webkit-animation-direction: normal; animation-direction: normal; }
+
+@keyframes eddy { 0% { opacity: 0; }
+  100% { opacity: 1; } }
+@keyframes eddyPre { 0% { opacity: 1; }
+  100% { opacity: 0; } }
+@keyframes rotateClockWise { 0% { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); } }
+@keyframes rotateAntiClockWise { 0% { -webkit-transform: rotate(360deg); -ms-transform: rotate(360deg); transform: rotate(360deg); }
+  100% { -webkit-transform: rotate(0deg); -ms-transform: rotate(0deg); transform: rotate(0deg); } }
+@-webkit-keyframes animate-stripes { 0% { background-position: 0 0; }
+  100% { background-position: 60px 0; } }
+@-moz-keyframes animate-stripes { 0% { background-position: 0 0; }
+  100% { background-position: 60px 0; } }
+#html5_3d_animation { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 100%; height: 100vh; text-align: center; letter-spacing: 15px; opacity: 0.7; z-index: -1; }
+
+.transtion-open { background: #000; }
+
+/*# sourceMappingURL=index.css.map */
